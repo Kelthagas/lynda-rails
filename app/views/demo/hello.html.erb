@@ -13,9 +13,11 @@
   <%= n %><br />
 <% end %><br />
 
-<%= link_to('index', {:action => 'index'}) %><br />
+<%= link_to("Index", {action: 'index'}) %><br />
 
-ID: <%= @id %><br />
-ID: <%= params[:id] %><br />
-Page: <%= @page %><br />
-Next Page: <%= @page.to_i + 1 %><br />
+<% if !@id.blank? && !@page.blank? %>
+  ID: <%= @id %><br />
+  ID: <%= params[:id] %><br />
+  Page: <%= @page %><br />
+  Next Page: <%= @page.to_i + 1 %><br />
+<% end %>

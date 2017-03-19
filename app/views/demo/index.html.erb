@@ -2,4 +2,10 @@
 
 <%= link_to('hello 1', 'demo/hello') %><br />
 
-<%= link_to('hello with parameters', {:action => 'hello', :page => 5, :id => 20}) %><br />
+<%= link_to('hello with parameters', {action: 'hello', page: 5, id: 20}) %><br />
+
+<%= link_to("Subjects >>", subjects_path, class: 'subject-link') %><br />
+
+<%= link_to("Pages >>", pages_path, class: 'page-link') %><br />
+
+<%= link_to("Sections >>", sections_path, class: 'section-link') %><br />

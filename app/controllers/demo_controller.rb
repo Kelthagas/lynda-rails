@@ -12,7 +12,7 @@ class DemoController < ApplicationController
   end
 
   def other_hello
-    redirect_to(:action => 'index')
+    redirect_to(action: 'index')
     # the demo controller is called by default because we are in demo_controller.rb
   end
 
