@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleCms</title>
+    <title>Simple CMS: <%= @page_title || "Admin Area" %></title>
+
+    <%= stylesheet_link_tag('admin', media: 'all', 'data-turbolinks-track': 'reload') %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div id="header">
+      <h1>Simple CMS Admin</h1>
+    </div>
+    <div id="main">
+      <% # Displays Flash Hashes %>
+      <% if !flash[:notice].blank? %>
+        <div class="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; lynda.com</p>
+    </div>
   </body>
 </html>
