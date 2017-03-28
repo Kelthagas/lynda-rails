@@ -3,6 +3,7 @@ class SubjectsController < ApplicationController
   layout 'admin'
 
   def index
+    logger.debug("*** Testing the logger ***")
     @subjects = Subject.sorted
   end
 
@@ -63,7 +64,9 @@ class SubjectsController < ApplicationController
   end
 
   private
+
   def subject_params
     params.require(:subject).permit(:name, :position, :visible)
   end
+
 end
