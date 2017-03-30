@@ -2,7 +2,7 @@ class Page < ApplicationRecord
 
   # 1:1 and 1:m association
   # use << to append to parent table
-  has_many :pages
+  has_many :sections
   belongs_to :subject
   has_and_belongs_to_many :admin_users
 
